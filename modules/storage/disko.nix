@@ -84,6 +84,7 @@
     };
 
     zpool.tank = {
+      type = "zpool";
       mode = "stripe";
       options = { ashift = "12"; };
       rootFsOptions = {
@@ -93,19 +94,19 @@
         "com.sun:auto-snapshot" = "false";
       };
       datasets = {
-        "media" = { mountpoint = "/tank/media"; };
-        "media/shows" = { mountpoint = "/tank/media/shows"; };
-        "media/movies" = { mountpoint = "/tank/media/movies"; };
-        "media/books" = { mountpoint = "/tank/media/books"; };
-        "media/music" = { mountpoint = "/tank/media/music"; };
-        "photos" = { mountpoint = "/tank/photos"; };
-        "apps" = { mountpoint = "/tank/apps"; };
-        "apps/jellyfin" = { mountpoint = "/tank/apps/jellyfin"; };
-        "apps/radarr" = { mountpoint = "/tank/apps/radarr"; };
-        "apps/sonarr" = { mountpoint = "/tank/apps/sonarr"; };
-        "apps/vaultwarden" = { mountpoint = "/tank/apps/vaultwarden"; };
-        "apps/immich" = { mountpoint = "/tank/apps/immich"; };
-        "apps/jellyseerr" = { mountpoint = "/tank/apps/jellyseerr"; };
+        "media" = { type = "zfs_fs"; mountpoint = "/tank/media"; };
+        "media/shows" = { type = "zfs_fs"; mountpoint = "/tank/media/shows"; };
+        "media/movies" = { type = "zfs_fs"; mountpoint = "/tank/media/movies"; };
+        "media/books" = { type = "zfs_fs"; mountpoint = "/tank/media/books"; };
+        "media/music" = { type = "zfs_fs"; mountpoint = "/tank/media/music"; };
+        "photos" = { type = "zfs_fs"; mountpoint = "/tank/photos"; };
+        "apps" = { type = "zfs_fs"; mountpoint = "/tank/apps"; };
+        "apps/jellyfin" = { type = "zfs_fs"; mountpoint = "/tank/apps/jellyfin"; };
+        "apps/radarr" = { type = "zfs_fs"; mountpoint = "/tank/apps/radarr"; };
+        "apps/sonarr" = { type = "zfs_fs"; mountpoint = "/tank/apps/sonarr"; };
+        "apps/vaultwarden" = { type = "zfs_fs"; mountpoint = "/tank/apps/vaultwarden"; };
+        "apps/immich" = { type = "zfs_fs"; mountpoint = "/tank/apps/immich"; };
+        "apps/jellyseerr" = { type = "zfs_fs"; mountpoint = "/tank/apps/jellyseerr"; };
       };
     };
   };
