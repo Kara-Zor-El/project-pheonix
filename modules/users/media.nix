@@ -8,7 +8,6 @@
   users.users.sonarr.extraGroups = [ "media" ];
   users.users.vaultwarden.extraGroups = [ "media" ];
   users.users.immich.extraGroups = [ "media" ];
-  users.users.jellyseerr.extraGroups = [ "media" ];
 
   # Ensure critical directories exist with media ownership
   systemd.tmpfiles.rules = [

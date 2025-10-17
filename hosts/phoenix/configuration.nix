@@ -17,8 +17,12 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.hostName = "phoenix";
+  networking.hostId = "deadbeef";
   time.timeZone = "UTC";
   i18n.defaultLocale = "en_US.UTF-8";
+
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   users.users.kara = {
     isNormalUser = true;
@@ -47,16 +51,7 @@
     banaction = "nftables-multiport";
     ignoreIP = [ "127.0.0.1/8" "::1" ];
     bantime = "1h";
-    findtime = "10m";
     maxretry = 5;
-    jails = {
-      sshd = ''
-        enabled = true
-        backend = systemd
-        port = ssh
-        journalmatch = _SYSTEMD_UNIT=sshd.service
-      '';
-    };
   };
 
   system.stateVersion = "24.11";
