@@ -68,24 +68,11 @@
           };
         };
       };
-      sdf = {
-        type = "disk";
-        device = "/dev/sdf";
-        content = {
-          type = "gpt";
-          partitions = {
-            tank = {
-              size = "100%";
-              content = { type = "zfs"; pool = "tank"; };
-            };
-          };
-        };
-      };
     };
 
     zpool.tank = {
       type = "zpool";
-      mode = "stripe";
+      mode = "";
       options = { ashift = "12"; };
       rootFsOptions = {
         compression = "zstd";

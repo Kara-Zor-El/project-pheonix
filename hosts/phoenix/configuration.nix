@@ -18,6 +18,7 @@
 
   networking.hostName = "phoenix";
   networking.hostId = "deadbeef";
+  networking.networkmanager.enable = true;
   time.timeZone = "UTC";
   i18n.defaultLocale = "en_US.UTF-8";
 
