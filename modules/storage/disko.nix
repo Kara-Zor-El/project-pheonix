@@ -6,60 +6,78 @@
       sda = {
         type = "disk";
         device = "/dev/sda";
-        partitions = {
-          tank = {
-            size = "100%";
-            content = { type = "zfs"; pool = "tank"; };
+        content = {
+          type = "gpt";
+          partitions = {
+            tank = {
+              size = "100%";
+              content = { type = "zfs"; pool = "tank"; };
+            };
           };
         };
       };
       sdb = {
         type = "disk";
         device = "/dev/sdb";
-        partitions = {
-          tank = {
-            size = "100%";
-            content = { type = "zfs"; pool = "tank"; };
+        content = {
+          type = "gpt";
+          partitions = {
+            tank = {
+              size = "100%";
+              content = { type = "zfs"; pool = "tank"; };
+            };
           };
         };
       };
       sdc = {
         type = "disk";
         device = "/dev/sdc";
-        partitions = {
-          tank = {
-            size = "100%";
-            content = { type = "zfs"; pool = "tank"; };
+        content = {
+          type = "gpt";
+          partitions = {
+            tank = {
+              size = "100%";
+              content = { type = "zfs"; pool = "tank"; };
+            };
           };
         };
       };
       sdd = {
         type = "disk";
         device = "/dev/sdd";
-        partitions = {
-          tank = {
-            size = "100%";
-            content = { type = "zfs"; pool = "tank"; };
+        content = {
+          type = "gpt";
+          partitions = {
+            tank = {
+              size = "100%";
+              content = { type = "zfs"; pool = "tank"; };
+            };
           };
         };
       };
       sde = {
         type = "disk";
         device = "/dev/sde";
-        partitions = {
-          tank = {
-            size = "100%";
-            content = { type = "zfs"; pool = "tank"; };
+        content = {
+          type = "gpt";
+          partitions = {
+            tank = {
+              size = "100%";
+              content = { type = "zfs"; pool = "tank"; };
+            };
           };
         };
       };
       sdf = {
         type = "disk";
         device = "/dev/sdf";
-        partitions = {
-          tank = {
-            size = "100%";
-            content = { type = "zfs"; pool = "tank"; };
+        content = {
+          type = "gpt";
+          partitions = {
+            tank = {
+              size = "100%";
+              content = { type = "zfs"; pool = "tank"; };
+            };
           };
         };
       };
